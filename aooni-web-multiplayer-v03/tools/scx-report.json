@@ -1,0 +1,32 @@
+{
+  "source": "[EUD]아오오니감염모드EX2.1(1).scx",
+  "verified": true,
+  "mpq": {
+    "formatVersion": 0,
+    "sectorSizeShift": 3,
+    "sectorSizeBytes": 4096,
+    "archiveSizeBytes": 1532221,
+    "hashTableOffset": 1515533,
+    "hashTableEntries": 1024,
+    "blockTableOffset": 1531917,
+    "blockTableEntries": 19
+  },
+  "scenario": {
+    "path": "staredit\\scenario.chk",
+    "hashSlot": 93,
+    "blockIndex": 0,
+    "archiveOffset": 32,
+    "compressedBytes": 680296,
+    "uncompressedBytes": 10900359,
+    "blockFlagsHex": "0x80010200",
+    "encrypted": true,
+    "compressed": true,
+    "compression": "PKWARE DCL / Implode inside MPQ sectors"
+  },
+  "status": {
+    "chkDecompression": "pending",
+    "exactCharacterStats": "pending",
+    "exactTriggerSystem": "pending",
+    "exactMapGeometry": "pending"
+  }
+}

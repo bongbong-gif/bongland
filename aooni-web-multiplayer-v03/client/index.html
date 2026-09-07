@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>아오오니 감염모드 — Web IO</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div><div class="brand">AO ONI <span>WEB</span></div><div class="sub">감염모드 멀티플레이</div></div>
+    <div id="connection" class="status offline">● 오프라인</div>
+  </header>
+
+  <main id="home" class="home">
+    <section class="hero panel">
+      <div>
+        <div class="eyebrow">BROWSER MULTIPLAYER</div>
+        <h1>방 만들고<br><strong>바로 플레이</strong></h1>
+        <p>설치 없이 브라우저에서 접속하고, 공개 방 목록에서 친구의 방에 참가하는 방식으로 구성했습니다.</p>
+        <div class="hero-actions">
+          <input id="name" maxlength="16" placeholder="닉네임" autocomplete="off">
+          <button id="create">방 만들기</button>
+        </div>
+        <div id="joined-note" class="hint"></div>
+      </div>
+      <div class="hero-art"><div class="glow"></div><div class="oni-face">AO<br>ONI</div></div>
+    </section>
+
+    <section class="panel room-panel">
+      <div class="panel-title"><h2>공개 방</h2><button id="refresh" class="ghost">새로고침</button></div>
+      <div id="room-list" class="room-list"><div class="empty">아직 열린 방이 없습니다.</div></div>
+      <div class="join-row"><input id="room" maxlength="6" placeholder="방 코드 6자리"><button id="join">코드로 참가</button></div>
+    </section>
+
+    <section class="panel info-grid">
+      <div><b>최대 7명</b><span>친구들과 같은 방에서 플레이</span></div>
+      <div><b>WASD</b><span>이동 · 방향키 공격</span></div>
+      <div><b>실시간</b><span>WebSocket 기반 동기화</span></div>
+    </section>
+  </main>
+
+  <section id="waiting" class="panel waiting" hidden>
+    <div class="panel-title"><div><div class="eyebrow">ROOM</div><h2 id="room-title">방 대기실</h2></div><button id="leave" class="ghost">나가기</button></div>
+    <div class="room-code-box"><span>방 코드</span><strong id="room-code">------</strong><button id="copy-room" class="ghost">복사</button></div>
+    <div id="players" class="players"></div>
+    <button id="start" class="start">게임 시작</button>
+    <div class="hint">친구는 홈페이지의 공개 방 목록 또는 이 6자리 코드를 통해 참가할 수 있습니다.</div>
+  </section>
+
+  <section id="game" hidden>
+    <div class="hud"><b id="role">ROLE</b><span>남은 시간 <strong id="timer">10:00</strong></span><span id="escape">탈출구 잠김</span><span id="ammo">탄약 6</span></div>
+    <canvas id="canvas" width="1600" height="900"></canvas>
+    <div id="help">WASD 이동 · 방향키 공격 · R 재장전 · K 스킬</div>
+    <div id="chatbox"></div>
+  </section>
+</div>
+<script src="/game.js"></script>
+</body>
+</html>

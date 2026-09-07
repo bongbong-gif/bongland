@@ -1,0 +1,61 @@
+{
+  "game": {
+    "title": "Ao Oni Infection Mode — Web Prototype",
+    "maxPlayers": 7,
+    "rolePickSeconds": 20,
+    "roundSeconds": 600,
+    "escapeOpensAtSeconds": 300,
+    "humanBaseSpeed": 3.0,
+    "oniBaseSpeed": 3.25,
+    "bulletSpeed": 9,
+    "bulletDamage": 1,
+    "magazineSize": 6,
+    "reloadSeconds": 1.8,
+    "itemSpawnEverySeconds": 10
+  },
+  "controls": {
+    "move": ["W", "A", "S", "D"],
+    "shoot": ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"],
+    "reload": "R",
+    "skill": "K",
+    "scoreboard": "Tab"
+  },
+  "items": {
+    "goldMarble": {
+      "effect": "oni_upgrade_or_human_character_change"
+    },
+    "blueMarble": {
+      "humanTimeDelta": -40,
+      "oniTimeDelta": 20
+    }
+  },
+  "characters": [
+    {"id":"char01","name":"Character 01","vision":6,"speed":3.0,"skill":"Placeholder"},
+    {"id":"char02","name":"Character 02","vision":7,"speed":3.1,"skill":"Placeholder"},
+    {"id":"char03","name":"Character 03","vision":8,"speed":2.9,"skill":"Placeholder"},
+    {"id":"char04","name":"Character 04","vision":6,"speed":3.2,"skill":"Placeholder"},
+    {"id":"char05","name":"Character 05","vision":9,"speed":2.8,"skill":"Placeholder"},
+    {"id":"char06","name":"Character 06","vision":7,"speed":3.0,"skill":"Placeholder"},
+    {"id":"char07","name":"Character 07","vision":8,"speed":3.2,"skill":"Placeholder"},
+    {"id":"char08","name":"Character 08","vision":5,"speed":3.4,"skill":"Placeholder"},
+    {"id":"char09","name":"Character 09","vision":10,"speed":2.7,"skill":"Placeholder"},
+    {"id":"char10","name":"Character 10","vision":6,"speed":3.3,"skill":"Placeholder"},
+    {"id":"char11","name":"Character 11","vision":8,"speed":2.9,"skill":"Placeholder"},
+    {"id":"char12","name":"Character 12","vision":7,"speed":3.1,"skill":"Placeholder"},
+    {"id":"char13","name":"Character 13","vision":9,"speed":3.0,"skill":"Placeholder"},
+    {"id":"char14","name":"Character 14","vision":6,"speed":3.5,"skill":"Placeholder"},
+    {"id":"char15","name":"Character 15","vision":8,"speed":2.8,"skill":"Placeholder"},
+    {"id":"char16","name":"Character 16","vision":7,"speed":3.2,"skill":"Placeholder"},
+    {"id":"char17","name":"Character 17","vision":10,"speed":2.9,"skill":"Placeholder"}
+  ],
+  "map": {
+    "width": 1600,
+    "height": 900,
+    "spawnMargin": 80,
+    "escapeOpen": false
+  },
+  "dataStatus": {
+    "exactMapValues": "pending-full-chk-extraction",
+    "note": "The character and speed numbers above are prototype placeholders, not claimed exact values from the SCX. Replace this file after reverse-engineering scenario.chk/EUD triggers."
+  }
+}
