@@ -1,0 +1,9 @@
+{
+  "name": "aooni-web-multiplayer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web multiplayer prototype inspired by the uploaded Ao Oni infection-mode StarCraft map.",
+  "main": "server/server.js",
+  "scripts": {"start": "node server/server.js", "dev": "node server/server.js"},
+  "dependencies": {"ws": "^8.18.0"}
+}

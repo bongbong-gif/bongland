@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>아오오니 감염모드 Web</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="crt">
+  <div class="scanlines"></div>
+  <main class="wrap">
+    <header class="titlebar"><div class="game-title">아오오니 <span>감염모드</span></div><div id="connection">OFFLINE</div></header>
+    <section id="home" class="screen-panel">
+      <div class="cyan-line"></div>
+      <div class="menu-title">AO ONI INFECTION WEB</div>
+      <div class="menu-note">스타 유즈맵 감염모드의 분위기를 살린 브라우저 멀티플레이 프로토타입</div>
+      <div class="menu-box">
+        <label>닉네임</label><input id="name" maxlength="16" placeholder="Player" autocomplete="off">
+        <button id="create" class="menu-btn">방 만들기</button>
+        <button id="quick" class="menu-btn">빠른 참가</button>
+      </div>
+      <div class="section-title">OPEN GAMES</div>
+      <div id="room-list" class="room-list"><div class="empty">열린 방을 찾는 중...</div></div>
+      <div class="join-line"><input id="room" maxlength="6" placeholder="ROOM CODE"><button id="join">참가</button></div>
+      <div class="hint">WASD 이동 · 방향키 공격 · R 재장전 · K 스킬</div>
+    </section>
+
+    <section id="waiting" class="screen-panel" hidden>
+      <div class="cyan-line"></div>
+      <div class="menu-title">ROOM <span id="room-code">------</span></div>
+      <div class="waiting-grid">
+        <div><div class="section-title">PLAYERS</div><div id="players"></div></div>
+        <div class="room-info"><div>MAX <b>7</b></div><div>ROOM <b id="room-title">------</b></div><button id="start" class="menu-btn">GAME START</button><button id="leave" class="small-btn">나가기</button></div>
+      </div>
+    </section>
+
+    <section id="game" hidden>
+      <div class="game-hud"><span id="role">HUMAN</span><span>TIME <b id="timer">10:00</b></span><span id="skill">SKILL READY</span><span id="ammo">AMMO 6</span></div>
+      <div class="game-frame"><canvas id="canvas" width="1280" height="720"></canvas></div>
+      <div class="game-foot"><span id="message">게임 시작</span><span>WASD 이동 · ↑↓←→ 공격 · R 재장전 · K 스킬</span></div>
+      <div id="chatbox"></div>
+    </section>
+  </main>
+</div>
+<script src="/game.js"></script>
+</body>
+</html>
